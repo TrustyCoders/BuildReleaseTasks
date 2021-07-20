@@ -2,7 +2,7 @@
   "id": "8ab90060-87e6-11eb-b1ba-7f6c1a371e5c",
   "name": "GetYoungestCertForHostHeader",
   "friendlyName": "Get Youngest Cert For Host Header",
-  "description": "This task gets youngest certificate for host header",
+  "description": "This task gets youngest certificates for host headers",
   "author": "DTI d.o.o Belgrade, Serbia",
   "helpMarkDown": "Replace with markdown to show in help",
   "category": "Utility",
@@ -13,8 +13,8 @@
   "demands": [],
   "version": {
     "Major": "0",
-    "Minor": "1",
-    "Patch": "4"
+    "Minor": "3",
+    "Patch": "11"
   },
   "minimumAgentVersion": "1.95.0",
   "instanceNameFormat": "GetYoungestCertForHostHeader $(message)",
@@ -22,9 +22,9 @@
     {
       "name": "HostHeader",
       "type": "string",
-      "label": "Host Header",
+      "label": "Host Headers",
       "required": true,
-      "helpMarkDown": "Host Header"
+      "helpMarkDown": "Host Headers separated by comma (,)"
     },
     {
       "name": "FriendlyName",

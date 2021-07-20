@@ -1,15 +1,15 @@
 {
     "manifestVersion": 1,
     "id": "GetYoungestCertForHostHeader",
-    "name": "Get Youngest Certs For Host Headers",
-    "version": "0.3.11",
+    "name": "Get Youngest Cert For Host Header",
+    "version": "0.2.7",
     "publisher": "DataTechInternational",
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
         }
     ],    
-    "description": "A task gets youngest certificates for host headers",
+    "description": "A task gets youngest certificate for host header",
     "categories": [
         "Azure Pipelines"
     ],

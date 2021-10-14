@@ -1,0 +1,52 @@
+{
+  "id": "219d7ebb-0609-4723-9d5e-d92983d4356f",
+  "name": "RegistryFolderAccessManagement",
+  "friendlyName": "Registry Folder Access Management",
+  "description": "This task is used to give access rights to a registry folder",
+  "author": "DTI d.o.o Belgrade, Serbia",
+  "helpMarkDown": "Replace with markdown to show in help",
+  "category": "Utility",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "demands": [],
+  "version": {
+    "Major": "0",
+    "Minor": "1",
+    "Patch": "0"
+  },
+  "minimumAgentVersion": "1.95.0",
+  "instanceNameFormat": "RegistryFolderAccessManagement $(message)",
+  "inputs": [
+    {
+      "name": "Username",
+      "type": "string",
+      "label": "Username",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "Username"
+    },
+    {
+      "name": "FolderName",
+      "type": "string",
+      "label": "Folder Name",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "FolderName"
+    },
+    {
+      "name": "AccessRights",
+      "type": "string",
+      "label": "Access Rights",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "Access rights names separeted with comma"
+    }
+  ],
+  "execution": {
+    "PowerShell3": {
+      "target": "folderAccessManagement.ps1"
+    }
+  }
+}

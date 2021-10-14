@@ -1,35 +1,35 @@
 {
     "manifestVersion": 1,
-    "id": "PrepareSiteBindings",
-    "name": "Prepare Site Bindings",
-    "version": "0.2.5",
+    "id": "RegistryFolderAccessManagement",
+    "name": "Registry Folder access management",
+    "version": "0.1.0",
     "publisher": "DataTechInternational",
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
         }
     ],    
-    "description": "A task prepares site bindings",
+    "description": "A task is used to give access rights to a registry folder",
     "categories": [
         "Azure Pipelines"
     ],
     "icons": {
-        "default": "PrepareSiteBindings/icon.png"        
+        "default": "RegistryFolderAccessManagement/icon.png"        
     },
     "files": [
         {
-            "path": "PrepareSiteBindings"
+            "path": "RegistryFolderAccessManagement"
         }
     ],
     "contributions": [
         {
-            "id": "PrepareSiteBindings",
+            "id": "RegistryFolderAccessManagement",
             "type": "ms.vss-distributed-task.task",
             "targets": [
                 "ms.vss-distributed-task.tasks"
             ],
             "properties": {
-                "name": "PrepareSiteBindings"
+                "name": "RegistryFolderAccessManagement"
             }
         }
     ]

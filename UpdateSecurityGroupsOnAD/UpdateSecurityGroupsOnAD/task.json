@@ -1,0 +1,42 @@
+{
+  "id": "0ab9b865-c5aa-4386-8b8e-34f1907087ed",
+  "name": "UpdateSecurityGroupsOnAD",
+  "friendlyName": "Update Security Groups On AD",
+  "description": "This task update security groups on AD",
+  "author": "DTI d.o.o Belgrade, Serbia",
+  "helpMarkDown": "Replace with markdown to show in help",
+  "category": "Utility",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "demands": [],
+  "version": {
+    "Major": "0",
+    "Minor": "1",
+    "Patch": "0"
+  },
+  "minimumAgentVersion": "1.95.0",
+  "instanceNameFormat": "UpdateSecurityGroupsOnAD $(message)",
+  "inputs": [
+    {
+      "name": "ActiveDirectories",
+      "type": "string",
+      "label": "Active Directories",
+      "required": true,
+      "helpMarkDown": "Active Directories in json format [{DomainController:'192.168.88.31', OrganizationalUnit:'OU=FT1,OU=TaxCore,DC=Tax,DC=Core', Username:'taxcoredeploy@tax.core', Password:'P@ssw0rd', envPrefix:'FT1_'}, ...]"
+    },
+    {
+      "name": "ExeFileName",
+      "type": "string",
+      "label": "Exe File Name",
+      "required": true,
+      "helpMarkDown": "Exe File Name is path to the exe file of AD Groups updater"
+    }
+  ],
+  "execution": {
+    "PowerShell3": {
+      "target": "UpdateSecurityGroupsOnAD.ps1"
+    }
+  }
+}

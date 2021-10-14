@@ -1,35 +1,35 @@
 {
     "manifestVersion": 1,
-    "id": "PrepareSiteBindings",
-    "name": "Prepare Site Bindings",
-    "version": "0.2.5",
+    "id": "UpdateSecurityGroupsOnAD",
+    "name": "Update Security Groups On AD",
+    "version": "0.1.0",
     "publisher": "DataTechInternational",
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
         }
     ],    
-    "description": "A task prepares site bindings",
+    "description": "Update security groups on AD",
     "categories": [
         "Azure Pipelines"
     ],
     "icons": {
-        "default": "PrepareSiteBindings/icon.png"        
+        "default": "UpdateSecurityGroupsOnAD/icon.png"        
     },
     "files": [
         {
-            "path": "PrepareSiteBindings"
+            "path": "UpdateSecurityGroupsOnAD"
         }
     ],
     "contributions": [
         {
-            "id": "PrepareSiteBindings",
+            "id": "UpdateSecurityGroupsOnAD",
             "type": "ms.vss-distributed-task.task",
             "targets": [
                 "ms.vss-distributed-task.tasks"
             ],
             "properties": {
-                "name": "PrepareSiteBindings"
+                "name": "UpdateSecurityGroupsOnAD"
             }
         }
     ]

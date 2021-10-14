@@ -27,8 +27,7 @@ foreach($bindingHashtable in $bindingsHashtable)
                         If($certAge -lt $singleCert.NotBefore -or $certAge -eq $dateTimeMinValue)
                         {
                             $youngestCert=$singleCert
-                            $certAge = $singleCert.NotBefore
-                            
+                            $certAge = $singleCert.NotBefore                            
                         }
                     }
                 }
@@ -38,6 +37,7 @@ foreach($bindingHashtable in $bindingsHashtable)
         $result+=@{ipAddress="*";protocol="https";hostname="$hostHeader"; port="$($bindingHashtable.port)"; sslThumbprint="$($youngestCert.Thumbprint)"; sniFlag=$True;}
 
         Write-Output "HostHeader: $hostHeader"
+        Write-Output "Subject: $($youngestCert.Subject)"
         Write-Output "Thumbprint: $($youngestCert.Thumbprint)"
     } else {
             $result+=@{ipAddress="*";protocol="http";hostname="$hostHeader"; port="$($bindingHashtable.port)"; sslThumbprint=""; sniFlag=$False;}

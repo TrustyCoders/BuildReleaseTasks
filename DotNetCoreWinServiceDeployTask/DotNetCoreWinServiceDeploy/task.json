@@ -1,0 +1,84 @@
+{
+  "id": "EA8C0918-02C5-4EEE-AE57-F7FC1A747EF6",
+  "name": "DotNetCoreWinServiceDeploy",
+  "friendlyName": ".NET Core Windows Service Deploy",
+  "description": "This task deploy .NET Core windows service",
+  "author": "DTI d.o.o Belgrade, Serbia",
+  "helpMarkDown": "Replace with markdown to show in help",
+  "category": "Utility",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "demands": [],
+  "version": {
+    "Major": "0",
+    "Minor": "1",
+    "Patch": "10"
+  },
+  "minimumAgentVersion": "1.95.0",
+  "instanceNameFormat": "DotNetCoreWinServiceDeploy $(message)",
+  "inputs": [
+    {
+      "name": "ServiceName",
+      "type": "string",
+      "label": "Service Name",
+      "required": true,
+      "helpMarkDown": "Service Name"
+    },
+    {
+      "name": "DisplayName",
+      "type": "string",
+      "label": "Display Name",
+      "required": true,
+      "helpMarkDown": "Display Name"
+    },
+    {
+      "name": "SourcePath",
+      "type": "string",
+      "label": "Source Path",
+      "required": true,
+      "helpMarkDown": "Artifact source path"
+    },
+    {
+      "name": "RootPath",
+      "type": "string",
+      "label": "Root Path",
+      "required": true,
+      "helpMarkDown": "Service root path"
+    },
+    {
+      "name": "ExcludeList",
+      "type": "string",
+      "label": "Exclude List",
+      "required": false,
+      "helpMarkDown": "Files and folders that excluded from deleting separated by comma (,)"
+    },
+    {
+      "name": "Executable",
+      "type": "string",
+      "label": "Executable",
+      "required": true,
+      "helpMarkDown": "Exe file"
+    },
+    {
+      "name": "StartType",
+      "type": "string",
+      "label": "StartType",
+      "required": true,
+      "helpMarkDown": "Service StartType"
+    },
+    {
+      "name": "Environment",
+      "type": "string",
+      "label": "Environment",
+      "required": true,
+      "helpMarkDown": "Environment"
+    }
+  ],
+  "execution": {
+    "PowerShell3": {
+      "target": "DeployWinService.ps1"
+    }
+  }
+}

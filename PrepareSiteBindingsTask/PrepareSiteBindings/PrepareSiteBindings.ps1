@@ -9,8 +9,8 @@ $result=@()
 $certs = Get-ChildItem -Path Cert:\LocalMachine\My
 foreach($bindingHashtable in $bindingsHashtable)
 {
+    $hostHeader=$bindingHashtable.hostHeader.Trim()
     If ($bindingHashtable.protocol -eq 'https'){
-        $hostHeader=$bindingHashtable.hostHeader.Trim()
         $youngestCert = $null
         $certAge = [System.DateTime]::MinValue
         $dateTimeMinValue=[System.DateTime]::MinValue

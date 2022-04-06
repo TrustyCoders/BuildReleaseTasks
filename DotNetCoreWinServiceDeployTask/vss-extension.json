@@ -1,35 +1,35 @@
 {
     "manifestVersion": 1,
-    "id": "PrepareSiteBindings",
-    "name": "Prepare Site Bindings",
-    "version": "0.2.6",
+    "id": "DotNetCoreWinServiceDeploy",
+    "name": ".NET Core Windows Service Deploy",
+    "version": "0.1.10",
     "publisher": "DataTechInternational",
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
         }
     ],    
-    "description": "A task prepares site bindings",
+    "description": "A task deploy .NET Core windows service",
     "categories": [
         "Azure Pipelines"
     ],
     "icons": {
-        "default": "PrepareSiteBindings/icon.png"        
+        "default": "DotNetCoreWinServiceDeploy/icon.png"        
     },
     "files": [
         {
-            "path": "PrepareSiteBindings"
+            "path": "DotNetCoreWinServiceDeploy"
         }
     ],
     "contributions": [
         {
-            "id": "PrepareSiteBindings",
+            "id": "DotNetCoreWinServiceDeploy",
             "type": "ms.vss-distributed-task.task",
             "targets": [
                 "ms.vss-distributed-task.tasks"
             ],
             "properties": {
-                "name": "PrepareSiteBindings"
+                "name": "DotNetCoreWinServiceDeploy"
             }
         }
     ]
